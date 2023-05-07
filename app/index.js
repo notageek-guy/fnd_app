@@ -1,4 +1,4 @@
-import { View, Text, TextInput, Image } from "react-native";
+import { View, TextInput, Image } from "react-native";
 import React, { useState } from "react";
 import GlobalSafe from "../components/GlobalSafe";
 import Btn from "../utils/button";
@@ -19,7 +19,7 @@ export default function Home() {
   const handleClick = () => {
     router.push({
       pathname: "/details",
-      params: { news },
+      params: { news: news },
     });
     setNews("");
   };

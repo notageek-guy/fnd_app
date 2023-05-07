@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { OPEN_AI_KEY } from "@env";
 
 function useFetch() {
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const API = "https://api.openai.com/v1/completions";
-
+  const OPEN_AI_KEY = "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";
   const fetchApi = async (news, delay = 400) => {
     setLoading(true);
     setTimeout(async () => {

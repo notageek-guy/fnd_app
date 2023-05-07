@@ -10,6 +10,7 @@ import GlobalSafe from "../components/GlobalSafe";
 
 export default function Details() {
   const params = useSearchParams();
+
   const [result, loading, error, fetchApi] = useFetch();
   const isFake = result?.toString().toLowerCase().includes("no");
   const randBtwtwo = Math.random() * (2 - 1.5) + 1.5;
@@ -18,6 +19,7 @@ export default function Details() {
   const randStats = isFake ? randBtwtwo : randBtwfive;
   const ans = randStats.toFixed(2);
   const str = isFake ? "Fake News" : "Real News";
+
   useEffect(() => {
     fetchApi(params?.news);
   }, []);
@@ -102,8 +104,6 @@ export default function Details() {
     </GlobalSafe>
   );
 }
-
-
 
 const styles = StyleSheet.create({
   box: {
