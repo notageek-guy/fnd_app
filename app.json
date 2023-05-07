@@ -5,6 +5,30 @@
       "bundler": "metro"
     },
     "name": "fnd-app",
-    "slug": "fnd-app"
+    "slug": "fnd-app",
+    "extra": {
+      "eas": {
+        "projectId": "ec674be7-37d9-4cd8-af13-953fcccf37ea"
+      }
+    },
+    "android": {
+      "package": "com.kumarmanish.fndapp"
+    }
+  },
+  "build": {
+    "preview": {
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "preview2": {
+      "android": {
+        "gradleCommand": ":app:assembleRelease"
+      }
+    },
+    "preview3": {
+      "developmentClient": true
+    },
+    "production": {}
   }
 }

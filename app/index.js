@@ -4,7 +4,7 @@ import GlobalSafe from "../components/GlobalSafe";
 import Btn from "../utils/button";
 import Header from "../components/Header";
 import { StatusBar } from "expo-status-bar";
-import { useRouter } from "expo-router";
+import { Link, useRouter } from "expo-router";
 import CustomSplash from "../components/CustomSplash";
 export default function Home() {
   const [news, setNews] = useState("");
@@ -47,11 +47,13 @@ export default function Home() {
           </Btn>
         </View>
         <View className="mt-4 p-4">
-          <Text className="text-center font-bold text-base">
+          <Link
+            href="https://github.com/notageek-guy/fnd_app"
+            className="text-center font-bold text-base"
+          >
             How do we scan news?
-          </Text>
+          </Link>
         </View>
-       
       </View>
     </GlobalSafe>
   );
